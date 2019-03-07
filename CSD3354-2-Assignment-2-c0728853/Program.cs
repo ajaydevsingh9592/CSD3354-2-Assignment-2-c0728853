@@ -10,7 +10,7 @@ namespace CSD3354_2_Assignment_2_c0728853
     public delegate void MyDelegate();
     public class DelegateExcercises : MyDelegate
     {
-
+    
     }
 }
 
