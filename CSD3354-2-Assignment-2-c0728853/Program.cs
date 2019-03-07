@@ -7,26 +7,60 @@ namespace CSD3354_2_Assignment_2_c0728853
 //ASSIGNMENT 2
 //March 7,2019
 {
-    public class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            DelegateExcercises delegateExcercises = new DelegateExcercises();
-            delegateExcercises.Method3();
-        }
-    }
-    public class DelegateExcercises
-    {
-        public delegate int MyDelegate();
+            DelegateExercises delegateExercises = new DelegateExercises();
 
-        void Method1()
-        {
-            System.Console.WriteLine("MyDelegate");
+            delegateExercises.Method3();
+
+
         }
-        public void Method3()
+
+
+    }
+    public class DelegateExercises
+
+    {
+        public delegate int MyDelegate(int intValue);
+
+
+
+        public int Method1(int intMethod1)
+
         {
+
+            return intMethod1 * 2;
+
+        }
+
+
+
+        public int Method2(int intMethod2)
+
+        {
+
+            return intMethod2 * 10;
+
+        }
+        public void Method4(MyDelegate myDelegate)
+        {
+            int result = myDelegate(10);
+            Console.WriteLine(result);
+        }
+
+
+
+        public void Method3()
+
+        {
+
             MyDelegate myDelegate = new MyDelegate(Method1);
-            myDelegate();
+            Method4(myDelegate);
+            myDelegate = new MyDelegate(Method2);
+            Method4(myDelegate);
+
         }
     }
 }
