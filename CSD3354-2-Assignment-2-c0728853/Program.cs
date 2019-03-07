@@ -31,7 +31,7 @@ namespace CSD3354_2_Assignment_2_c0728853
 
         {
 
-            return intMethod1 * 2;
+            return intMethod1 * 4;
 
         }
 
@@ -41,13 +41,13 @@ namespace CSD3354_2_Assignment_2_c0728853
 
         {
 
-            return intMethod2 * 10;
+            return intMethod2 * 20;
 
         }
         public void Method4(MyDelegate myDelegate)
         {
-            int result = myDelegate(10);
-            Console.WriteLine(result);
+            for (int i = 1; i <= 5; i++)
+                System.Console.WriteLine(myDelegate(i) + " ");
         }
 
 
